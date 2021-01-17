@@ -1,0 +1,53 @@
+{
+  "name": "CC",
+  "version": "0.0.1",
+  "description": "Gulp",
+  "author": "Yoshiyuki Ito",
+  "repository": {
+    "type": "git"
+  },
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.5",
+    "coffee-script": "^1.12.2",
+    "flickity": "^2.1.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-coffee": "^3.0.2",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-header": "^2.0.1",
+    "gulp-load-plugins": "^1.6.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-image": "^1.1.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp.spritesmith": "^6.10.1",
+    "layzr.js": "^2.2.1",
+    "node-notifier": "^5.2.1",
+    "node-sass-package-importer": "^5.1.0",
+    "run-sequence": "^2.2.1",
+    "webpack-stream": "^5.1.1"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "flickity-fullscreen": "^1.1.1",
+    "flickity-imagesloaded": "^2.0.0",
+    "js-cookie": "^2.2.0",
+    "natives": "^1.1.6",
+    "npm": "^6.9.0",
+    "raven-js": "^3.24.2",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.16.5"
+  }
+}

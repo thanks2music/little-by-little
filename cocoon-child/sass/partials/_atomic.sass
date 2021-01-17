@@ -1,0 +1,65 @@
+ul
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100vw
+  height: 100vh
+
+  li
+    flex-basis: 15vw
+
+    &:not(:last-child)
+      margin-right: 2rem
+
+    &:first-child a
+      transition: all 500ms ease-out
+
+      &:hover
+        background: #2fa6ef
+        color: #fff
+
+      &:active
+        transition: font-size 300ms ease
+        font-size: 0.8rem
+
+    &:nth-child(2) a
+      transition: all 300ms ease
+
+      &:hover
+        transform: scale(1.05)
+        background: linear-gradient(to right, #52a0fd 0%, #00e2fa 80%, #00e2fa 100%)
+        color: #fff
+
+      &:active
+        transform: scale(0.95)
+
+    &:last-child a
+      transition: all 300ms ease-in-out
+
+      &:hover
+        transform: scale(0.95)
+        background: #2fa6ef
+        color: #fff
+
+      &:active
+        transform: scale(0.8)
+
+      &.clicked
+        width: 14vw
+        transform: scale(1)
+
+        &:before
+          font-size: 1rem
+          margin-right: 0.2rem
+
+  a
+    display: block
+    border: 1px solid #2fa6ef
+    border-radius: 100rem
+    padding: 1rem 0.5rem
+    font-family: Arial
+    font-size: 1rem
+    text-align: center
+    color: #2fa6ef
+    background: #fff
+    cursor: pointer
