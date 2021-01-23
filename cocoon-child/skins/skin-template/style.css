@@ -1,11 +1,227 @@
-/*
-  Skin Name: スキンテンプレート
-  Description: スキン自作の際にひな型となるスキンです。スタイルは何も入っていません。
-  Skin URI: https://wp-cocoon.com/
+@charset "UTF-8";
+/*!
+  Theme Name: Cocoon Child
+  Description: Cocoon専用の子テーマ
+  Theme URI: https://wp-cocoon.com/
   Author: わいひら
   Author URI: https://nelog.jp/
-  Screenshot URI: https://im-cocoon.net/wp-content/uploads/skin-template.png
-  Version: 1.0.2
-  Priority: 9999000000
-*/
-/*以下にスタイルシートを記入してください*/
+  Template:   cocoon-master
+  Version:    1.1.2 */
+:root {
+  --key-color: #00a0e9;
+  --sub-color: #f6ff00;
+  --margin: 10px;
+}
+
+.l-width-10percent {
+  width: 10%;
+  margin: auto auto 1rem;
+}
+
+.l-margin-b-1em {
+  margin-bottom: 1em;
+  margin-bottom: 1rem;
+}
+
+.l-padding-t-1em {
+  padding-top: 1em;
+}
+
+.l-font-size10px {
+  font-size: 10px;
+}
+
+.l-width-20percent {
+  width: 20%;
+  margin: auto auto 1rem;
+}
+
+.l-margin-b-2em {
+  margin-bottom: 2em;
+  margin-bottom: 2rem;
+}
+
+.l-padding-t-2em {
+  padding-top: 2em;
+}
+
+.l-font-size11px {
+  font-size: 11px;
+}
+
+.l-width-30percent {
+  width: 30%;
+  margin: auto auto 1rem;
+}
+
+.l-margin-b-3em {
+  margin-bottom: 3em;
+  margin-bottom: 3rem;
+}
+
+.l-padding-t-3em {
+  padding-top: 3em;
+}
+
+.l-font-size12px {
+  font-size: 12px;
+}
+
+.l-width-40percent {
+  width: 40%;
+  margin: auto auto 1rem;
+}
+
+.l-margin-b-4em {
+  margin-bottom: 4em;
+  margin-bottom: 4rem;
+}
+
+.l-padding-t-4em {
+  padding-top: 4em;
+}
+
+.l-font-size13px {
+  font-size: 13px;
+}
+
+.l-width-50percent {
+  width: 50%;
+  margin: auto auto 1rem;
+}
+
+.l-margin-b-5em {
+  margin-bottom: 5em;
+  margin-bottom: 5rem;
+}
+
+.l-padding-t-5em {
+  padding-top: 5em;
+}
+
+.l-font-size14px {
+  font-size: 14px;
+}
+
+.l-width-60percent {
+  width: 60%;
+  margin: auto auto 1rem;
+}
+
+.l-margin-b-6em {
+  margin-bottom: 6em;
+  margin-bottom: 6rem;
+}
+
+.l-padding-t-6em {
+  padding-top: 6em;
+}
+
+.l-font-size15px {
+  font-size: 15px;
+}
+
+.l-width-70percent {
+  width: 70%;
+  margin: auto auto 1rem;
+}
+
+.l-margin-b-7em {
+  margin-bottom: 7em;
+  margin-bottom: 7rem;
+}
+
+.l-padding-t-7em {
+  padding-top: 7em;
+}
+
+.l-font-size16px {
+  font-size: 16px;
+}
+
+.l-width-80percent {
+  width: 80%;
+  margin: auto auto 1rem;
+}
+
+.l-margin-b-8em {
+  margin-bottom: 8em;
+  margin-bottom: 8rem;
+}
+
+.l-padding-t-8em {
+  padding-top: 8em;
+}
+
+.l-font-size17px {
+  font-size: 17px;
+}
+
+.l-width-90percent {
+  width: 90%;
+  margin: auto auto 1rem;
+}
+
+.l-margin-b-9em {
+  margin-bottom: 9em;
+  margin-bottom: 9rem;
+}
+
+.l-padding-t-9em {
+  padding-top: 9em;
+}
+
+.l-font-size18px {
+  font-size: 18px;
+}
+
+.l-width-100percent {
+  width: 100%;
+  margin: auto auto 1rem;
+}
+
+.l-margin-b-10em {
+  margin-bottom: 10em;
+  margin-bottom: 10rem;
+}
+
+.l-padding-t-10em {
+  padding-top: 10em;
+}
+
+.l-font-size19px {
+  font-size: 19px;
+}
+
+.l-width-110percent {
+  width: 110%;
+  margin: auto auto 1rem;
+}
+
+.l-margin-b-11em {
+  margin-bottom: 11em;
+  margin-bottom: 11rem;
+}
+
+.l-padding-t-11em {
+  padding-top: 11em;
+}
+
+.l-font-size110px {
+  font-size: 110px;
+}
+
+.l-center {
+  text-align: center;
+  margin: auto;
+}
+
+.btn-chanto__wrap a {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.btn-chanto__wrap a.btn-m {
+  background: var(--sub-color);
+  color: #333;
+}

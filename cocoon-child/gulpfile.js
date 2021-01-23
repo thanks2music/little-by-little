@@ -5,7 +5,6 @@ const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
-const sassImage = require('gulp-sass-image');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('gulp-autoprefixer');
 const packageImporter = require('node-sass-package-importer');
@@ -13,7 +12,7 @@ const notifier = require('node-notifier');
 const plumber = require('gulp-plumber');
 const header = require('gulp-header');
 const config = {
-  supportBrowsers: ['ios >= 7', 'android >= 4.4'],
+  supportBrowsers: ['defaults'],
   images: 'images/**/*.+(jpeg|jpg|png|gif|svg)',
   javascripts: ['src/**/*.js'],
   sass: ['sass/**/*.scss', 'sass/**/*.sass'],
@@ -30,16 +29,6 @@ const notify = (taskName, error) => {
   });
 };
 
-gulp.task('sass-image', () => {
-  return gulp.src(config.images)
-    .pipe(sassImage({
-        targetFile: 'modules/_sass-image.scss',
-        images_path: 'images/',
-        css_path: 'dist/css/',
-        includeData: false,
-    }))
-    .pipe(gulp.dest('sass'));
-});
 
 gulp.task('sass', () => {
   return gulp.src(
@@ -52,13 +41,13 @@ gulp.task('sass', () => {
       }
     }))
     .pipe(sass({
-      outputStyle: 'compressed',
+      outputStyle: 'expanded',
       importer: packageImporter({
         extensions: ['.sass', '.scss', '.css']
       })
     }))
     .pipe(autoprefixer({browsers: config.supportBrowsers, add: true}))
-    .pipe(gulp.dest('dist/css/'));
+    .pipe(gulp.dest('skins/skin-template/'));
 });
 
 gulp.task('webpack', () => {
@@ -66,20 +55,19 @@ gulp.task('webpack', () => {
     .on('error', function handleError() {
       this.emit('end');
     })
-    .pipe(gulp.dest('dist/scripts/'));
+    .pipe(gulp.dest('skins/skin-template/js/'));
 });
 
 gulp.task('minifyWebPackJS', () => {
-  return gulp.src('dist/scripts/*.js')
+  return gulp.src('skins/skin-template/*.js')
     .pipe(plumber())
     .pipe(uglify())
-    .pipe(gulp.dest('dist/min/'));
+    .pipe(gulp.dest('skins/skin-template/'));
 });
 
 gulp.task('watch', () => {
   gulp.watch(config.javascripts, ['webpack']);
-  gulp.watch('dist/scripts/*.js', ['minifyWebPackJS']);
-  gulp.watch(config.images, ['sass-image']);
+  gulp.watch('skins/skin-template/*.js', ['minifyWebPackJS']);
   gulp.watch(config.sass, ['sass']);
 });
 
