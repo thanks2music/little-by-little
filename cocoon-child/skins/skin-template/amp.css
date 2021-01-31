@@ -1,1 +1,37 @@
-/*以下にAMPページのみに反映させるスタイルシートを記入してください*/
+.entry-content .psgal {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.entry-content .psgal figure {
+  margin-bottom: 1em;
+  flex-basis: 47%;
+}
+
+.entry-content .psgal figure amp-img,
+.entry-content .psgal figure amp-img[width|="0"],
+.entry-content .psgal figure amp-img[height|="0"],
+.entry-content .psgal figure amp-img[width|="1"],
+.entry-content .psgal figure amp-img[height|="1"] {
+  display: inherit;
+}
+
+.entry-content .psgal .photoswipe-gallery-caption {
+  padding-top: .7em;
+  font-size: 13px;
+}
+
+.entry-content .psgal .photoswipe-gallery-caption b {
+  color: var(--sub-color);
+}
+
+.entry-content .psgal .photoswipe-gallery-caption i {
+  color: var(--key-color);
+  font-weight: bold;
+}
+
+.entry-content .psgal figcaption {
+  font-size: 13px;
+  padding-top: 5px;
+}

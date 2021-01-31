@@ -7,3 +7,4 @@
 
 <?php endif; ?>
 <?php //全ての訪問者をカウントする場合は以下に挿入 ?>
+<amp-image-lightbox id="lightbox2" layout="nodisplay"></amp-image-lightbox>

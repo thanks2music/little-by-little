@@ -1,0 +1,33 @@
+// アップロードする際はテーマ直下へ
+.entry-content
+  .psgal
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+    figure
+      margin-bottom: 1em
+      flex-basis: 47%
+
+      amp-img,
+      amp-img[width|="0"],
+      amp-img[height|="0"],
+      amp-img[width|="1"],
+      amp-img[height|="1"]
+        display: inherit
+
+    .photoswipe-gallery-caption
+      padding-top: .7em
+      font-size: 13px
+
+      b
+        color: var(--sub-color)
+
+      i
+        color: var(--key-color)
+        font-weight: bold
+
+    figcaption
+      font-size: 13px;
+      padding-top: 5px;
+
