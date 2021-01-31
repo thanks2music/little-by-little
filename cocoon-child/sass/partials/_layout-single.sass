@@ -1,3 +1,9 @@
+// モバイルではヘッダーを非表示
+.single
+  .header-container
+    +mediaquery('max', 768px)
+      display: none
+
 .btn-chanto__wrap
   a
     display: inline-block

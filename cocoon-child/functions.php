@@ -4,4 +4,8 @@ if ( !defined( 'ABSPATH' ) ) exit;
 //子テーマ用のビジュアルエディタースタイルを適用
 add_editor_style();
 
-//以下に子テーマ用の関数を書く
+// 除外するカテゴリーIDを配列で指定する
+// add_filter( 'get_related_wp_query_args', function ($args){
+//   $args['category__not_in'] = array(19);
+//   return $args;
+// } ); 

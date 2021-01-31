@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+@mixin mediaquery($name, $query: false, $base: 'width') {
+  @if $query {
+    @if $base == 'width' {
+      @if $name == "max" {
+        @media (max-width: $query) {
+          @content;
+        }
+      }
+
+      @else if $name == "min" {
+        @media (min-width: $query) {
+          @content;
+        }
+      }
+    } @else if $base == 'height' {
+      @if $name == "max" {
+        @media (max-height: $query) {
+          @content;
+        }
+      }
+
+      @else if $name == "min" {
+        @media (min-height: $query) {
+          @content;
+        }
+      }
+    }
+  } @else {
+    // Small Device
+    @if $name == "s" {
+      @media (max-width: 320px) {
+        @content;
+      }
+    }
+
+    // Medium Device
+    @else if $name == "m" {
+      @media (max-width: 480px) {
+        @content;
+      }
+    }
+
+    // Large Device
+    // iPhone4横向きからPCまで
+    @else if $name == "l" {
+      @media (min-width: 480px) {
+        @content;
+      }
+    }
+
+    @else if $name == "large" {
+      @media (min-width: 600px) {
+        @content;
+      }
+    }
+
+    @else if $name == "pc" {
+      .pc & {
+        @content;
+      }
+    }
+
+    @else if $name == "sp" {
+      .sp & {
+        @content;
+      }
+    }
+
+    @else if $name == "android" {
+      .android & {
+        @content;
+      }
+    }
+
+    @else if $name == "iphone5" {
+      @media (max-width: 320px) {
+        @content;
+      }
+    }
+
+    @else if $name == "iphone6" {
+      @media (max-width: 375px) {
+        @content;
+      }
+    }
+
+    @else if $name == "iphone6plus" {
+      @media (max-width: 414px) {
+        @content;
+      }
+    }
+
+    // 横向き
+    @else if $name == "landscape" {
+      @media only screen
+        and (min-width: 480px)
+        and (max-width: 749px)
+        and (orientation: landscape) {
+          @content;
+      }
+    }
+
+    // 縦向き
+    @else if $name == "portrait" {
+      @media (orientation: portrait) {
+        @content;
+      }
+    }
+
+    // ノートPC
+    @else if $name == "laptop" {
+      @if ($query) {
+        @media (max-height: $query) {
+          @content;
+        }
+      // 指定が無かった場合はMacbook Air 13インチの900pxを基準にする
+      } @else {
+        @media (max-height: 900px) {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+@mixin font-awesome($icon) {
+  font-family: "fontawesome";
+  content: $icon;
+  position: relative;
+  margin-right: .3em;
+}
+
+@mixin bg-responsive($file, $dimensions, $base: width, $scale: 100%) {
+  $width: nth($dimensions, 1);
+  $height: nth($dimensions, 2);
+  background: {
+    image: url($file);
+    size: contain;
+    repeat: no-repeat;
+    position: 0 0;
+  }
+
+  @if $base == width {
+    padding-bottom: $height / $width * $scale;
+    width: $scale;
+    height: 0;
+  } @else if $base == height {
+    padding-left: $width / $height * $scale;
+    height: $scale;
+    width: 0;
+  }
+}
+
+@mixin hide-text {
+  text-indent: -9999px;
+  text-align: left;
+}

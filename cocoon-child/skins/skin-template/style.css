@@ -216,6 +216,12 @@
   margin: auto;
 }
 
+@media (max-width: 768px) {
+  .single .header-container {
+    display: none;
+  }
+}
+
 .btn-chanto__wrap a {
   display: inline-block;
   margin-bottom: 15px;
